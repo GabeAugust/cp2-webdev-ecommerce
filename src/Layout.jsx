@@ -6,7 +6,6 @@ export default function Layout() {
     <div className="min-h-screen bg-gray-100">
       <Navbar />
       <main>
-        <p> Conteúdo principal</p>
         <Outlet/>
       </main>
     </div>
