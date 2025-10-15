@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Section from "../components/Section";
+import Card from "../components/Card"
 
 export default function Home() {
   const [eletricProducts, setEletricProducts]  = useState([])
@@ -32,11 +33,11 @@ export default function Home() {
 
   return (
     <div>
-        <h2 className="text-2xl font-bold mb-4">Bem-vindo ao Fiap Commerce!</h2>
+
         <Section title="Eletrônicos">
           {eletricProducts.map(product => {
             return(
-              <p>{product.title}</p>
+              <Card  title={product.title} image={product.image} price={product.price} />
             )
           })}
         </Section>
@@ -44,7 +45,7 @@ export default function Home() {
          <Section title="Joias">
           {jeweleryProducts.map(product => {
             return(
-              <p>{product.title}</p>
+              <Card  title={product.title} image={product.image} price={product.price} />
             )
           })}
         </Section>
@@ -52,7 +53,7 @@ export default function Home() {
         <Section title="Roupas Masculinas">
           {mensProducts.map(product => {
             return(
-              <p>{product.title}</p>
+              <Card  title={product.title} image={product.image} price={product.price} />
             )
           })}
         </Section>
